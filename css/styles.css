@@ -1,0 +1,689 @@
+body{
+    font-family: 'helvetica','sans-serif';
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5{
+    line-height: 1.5;
+    font-weight: 300;
+    margin: 0.5em 0;
+}
+
+h1{
+    font-size:2.5em;
+}
+
+h2{
+    font-size: 2em;
+}
+
+h3{
+    font-size: 1.6em;
+}
+
+h4{
+    font-size: 1.4em;
+}
+
+h5{
+    font-size: 1.2em;
+}
+
+a{
+    text-decoration: none;
+}
+
+p, label, strong{
+    line-height: 2;
+    font-size: 0.85em;
+    font-weight: 300;
+}
+
+.flex{
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+    justify-content: space-between;
+}
+
+.badge{
+    padding: 9px 20px;
+    color: #eee;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.75em;
+}
+
+.badge.new{
+    background-color: #ff205f;
+}
+
+.badge.action{
+    background-color: #4EAE60;
+}
+
+.badge.race{
+    background-color: #694EAE;
+}
+
+.badge.fan{
+    background-color: #40ABF5;
+}
+
+.badge.tour{
+    background-color: #fB6E10;
+}
+
+.badge.pre{
+    background-color: #ffB320 ;
+    color: #252525;
+}
+
+/** Header Starts **/
+header{
+    background-color: #000;
+    padding: 20px 0;
+    position: relative;
+    
+}
+
+.menu{
+    background-color: transparent;
+    border: 1px solid #ffB320;
+    padding: 3px 5px;
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu.strip{
+    display: block;
+    height: 1px;
+    background-color: #ffB320;
+    margin: 4px 0;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 100px;
+}
+
+nav ul{
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+
+nav ul li{
+    display: inline-block;
+    font-size: 1em;
+    margin: 0 18px;
+    padding: 8px 15px;
+    position: relative;
+}
+
+nav ul li a{
+    color: #eee;
+    font-weight: 600;
+}
+
+nav ul li a:hover{
+    color: #FFB320;
+}
+
+nav ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ffB320;
+    display: block;
+    margin:auto;
+    transition: 0.5s;
+}
+
+nav ul li:hover::after{
+    width: 100%;
+}
+
+#sign{
+    background-color: #FFB320;
+    color: #131313;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 00.85em;
+    font-weight: 600;
+    height: fit-content;
+    margin-left: 50px;
+    margin-top: 10px;
+} 
+
+#sign:hover{
+    background-color: #f7a707;
+    
+}
+/**Header End **/
+
+/** Introduction Start **/
+#intro{
+    background: url('../images/intro.jpg') top center no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.intro-text{
+    max-width: 1200px;
+    margin: 150px auto 0;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+}
+
+.intro-text h1{
+    color: #eee;
+    font-size: 3.5em;
+    font-weight: 300;
+    margin: 0.5em 0;
+    text-align: center;
+}
+
+.intro-text span{
+    color: #ffB320;
+}
+
+.intro-text h5{
+    color: #eee;
+    font-size: 0.85em;
+    font-weight: 300;
+    margin: 0.5em 0;
+    text-align: center;
+}
+/** Introduction End**/ 
+
+/** Games Start **/
+#games{
+    margin-bottom: 75px;
+}
+
+#games .box{
+    flex-basis: 25%;
+    position:relative;
+    height: 380px;
+    filter:grayscale(0);
+    transition:1s;
+}
+
+#games .box:hover{
+    filter: sepia(1);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#games .box.new{
+    background: url('../images/new1.jpeg') top center no-repeat;
+    background-size: cover;
+}
+
+#games .box.action{
+    background: url('../images/action1.jpg') top center no-repeat;
+    background-size: cover;
+    margin-left: 20px;
+}
+
+#games .box.race{
+    background: url('../images/race1.jpg') top center no-repeat;
+    background-size: cover;
+    margin-left: 20px;
+}
+
+#games .box.fan{
+    background: url('../images/fan1.jpg') top center no-repeat;
+    background-size: cover;
+    margin-left: 20px;
+}
+
+#games .box.badge{
+    position: relative;
+    z-index: 2;
+    top: 20px;
+    left: 20px;
+}
+
+#games .box .contents{
+    position:absolute;
+    z-index: 2;
+    bottom: 20px;
+    left:0;
+    color: #eee;
+    padding: 0 35px 0 25px;
+}
+
+#games .box .contents a{
+    font-size: 0.8em;
+    font-weight: 300;
+    color: #999;
+}
+/** Games End**/
+
+/** Tournaments Start **/
+#tour .flex{
+    position: relative;
+}
+
+#tour .badge{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+}
+
+#tour .badge.tour{
+    top:-32px;
+    left: 15px;
+    font-size: 20px;
+}
+
+#tour .box{
+    background-color: #252525;
+    padding: 70px 20px 40px;
+    flex-basis: 43%;
+    position: relative;
+    margin-top: 20px;
+}
+
+#tour .box .tour-img{
+    float: left;
+    width: 100%;
+}
+
+#tour .box .tour-img img{
+    width:100%;
+}
+
+#tour .box .tour-cont{
+    float: left;
+    margin-left: 25px;
+    width: 60%;
+}
+
+#tour .box .tour-cont h3{
+    color: #ffB320;
+    margin-top: 0;
+}
+
+#tour .box .tour-cont label{
+    color: #999;
+    font-size: 0.75em;
+}
+
+#tour .box .tour-cont label.prizes{
+    color: #ffB320;
+    display: inline-block;
+    margin-top: 12px;
+}
+
+#tour .box .tour-cont strong{
+    color: #eee;
+    font-size: 0.75em;
+}
+/** Tournaments End**/
+
+/** Reviews Start **/
+#recent1{
+    width: 100%;
+    padding: 70px 0;
+    background: #f4f4f4;
+}
+
+#recent1 h1{
+    text-align: center;
+    padding-bottom: 70px;
+    margin-top: -15px;
+}
+
+#recent1 .box{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.service{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.rate{
+    border-radius: 100%;
+    padding: 20px;
+    font-size: 1.0em;
+    color: #eee;
+    font-weight: 600;
+    background-color: #1d1c1a;
+    position: absolute;
+    top: -25px;
+    left: 225px;
+}
+
+.service img{
+    width: 100%;
+    border-radius: 7px;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.1),#FFB320);
+    opacity: 0;
+    transition: 1s;
+}
+
+.service:hover .overlay{
+    opacity: 1;
+}
+
+.info{
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+
+.info hr{
+    background: #000;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+.info p{
+    font-size: 15px;
+}
+
+.service:hover .info{
+    bottom: 40%;
+    opacity: 1;
+}
+/** Review End **/
+
+
+/** Comments Start **/
+#post{
+    background-color: #4a4a4a;
+    margin-bottom: 20px;
+    margin-top: -30px;
+}
+
+#post .game-war{
+    flex-basis: 32%;
+    position: relative;
+}
+
+#post .game-war img{
+    margin-bottom: 35em;
+    margin-top: 80px;
+}
+
+#post .game-war .foot-img{
+    position: absolute;
+    margin-bottom: 300px;
+    margin-top: 160px;
+    margin-left: -120px;
+    width: 100%;
+    height: 50vh;
+}
+
+#post .comm{
+    flex-basis: 28%;
+    background-color: #252525;
+    padding: 20px 20px 25px;
+    border: 1px solid #4a4a4a;
+    margin-bottom: 165px;
+    margin-top: 80px;
+}
+
+#post .comm h3{
+    color: #eee;
+}
+
+.post-item{
+    margin-top: 25px;
+}
+
+.post-item:first-child{
+    margin-top: 0;
+}
+
+.post-item:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.post-item img{
+    float: left;
+    width: 30%;
+}
+
+.post-item > div{
+    float: left;
+    margin-left: 5%;
+    width: 65%;
+}
+
+.post-item > div h5{
+    color: #ffB320;
+    font-size: 0.8em;
+    margin-top: 0;
+}
+
+.post-item > div p{
+    color: #eee;
+    margin: 5px 0;
+    font-size: 0.8em;
+}
+
+.post-item > div small{
+    color: #999;
+    font-size: 0.75em;
+}
+
+.comm-item{
+    margin-top: 35px;
+}
+
+.comm-item:first-child{
+    margin-top: 0;
+}
+
+.comm-item:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.comm-item img{
+    width: 23%;
+    height: auto;
+    border-radius: 50%;
+    float: left;
+}
+
+.comm-item > div{
+    float: left;
+    margin-left: 7%;
+    width: 65%;
+}
+
+.comm-item > div p{
+    color: #eee;
+    font-size: 0.8em;
+    margin: 5px 0;
+}
+
+.comm-item > div p span{
+    color: #999;
+}
+
+.comm-item > div p span.auth{
+    color: #e92159;
+}
+
+.comm-item > div h5{
+    color: #FFB320;
+    font-size: 0.7em;
+    margin-top: 0;
+}
+/** Comments End**/
+
+/** Query Start **/
+.container{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.container h1{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.cont{
+    background-color: #252525;
+    display:flex;
+}
+
+.cont-left{
+    flex-basis: 60%;
+    padding: 40px 60px;
+    color: #eee;
+}
+
+.cont-left h3{
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.cont-right{
+    flex-basis:40%;
+    padding: 40px;
+    background: #ffB320;
+    color: #252525;
+    
+}
+
+.cont-right h3{
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.row .group{
+    flex-basis: 45%;
+}
+
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid #FFB320;
+    outline: none;
+    padding-bottom: 5px;
+}
+
+textarea{
+    width: 100%;
+    border: 3px solid #FFB320;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+label{
+    margin-bottom: 6px;
+    display: block;
+    color: #eee;
+}
+
+button{
+    background-color: #ffB320;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: #252525;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+button:hover{
+    background-color: #f7a707;
+    
+}
+
+tr td:first-child{
+    padding-right: 20px;
+}
+
+tr td{
+    padding-top: 20px;
+}
+/** Query End**/
+
+/** footer start **/
+.footer{
+    background-color: #4a4a4a;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.footer p{
+    color: #ddd;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+/** footer end**/
+
+/** responsive  **/
+
+@media screen and (max-width:770px){
+    .rate{
+        border-radius: 100%;
+        padding: 20px;
+        font-size: 1.0em;
+        color: #eee;
+        font-weight: 600;
+        background-color: #1d1c1a;
+        position: absolute;
+        top: -25px;
+        left: 85px;
+    }
+}
